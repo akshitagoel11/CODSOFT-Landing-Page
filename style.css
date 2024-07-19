@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rancho&family=Water+Brush&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+#main{
+    width:100%;
+    height:100%;
+    display:flex;
+    animation: transitionIn 0.8s;
+}
+
+#left{
+    position: relative;
+    width:40%;
+    height:100%;
+}
+#lnav{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    padding:20px 30px;
+}
+#lnavr{
+    display: flex;
+    align-items: center;
+}
+.button{
+    padding: 9px 20px;
+    border:none;
+    background-color: royalblue;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    color:white;
+    cursor: pointer;
+    font-weight: 400;
+    box-shadow: 0 5px 10px rgba(0 ,0 ,0 ,0.1);
+    transition:transform 0.2s ease;
+}
+
+.button:active{
+    transform: scale(0.96);
+}
+#lnavr a{
+    margin-left: 1rem;
+    text-decoration: none;
+    color:black;
+    font-weight: 500;  
+}
+#lnavr i{
+    color: royalblue;
+    margin-left: 1rem;
+}
+#textcenter h1{
+    font-size: 90px;
+    font-weight: 900;
+    animation: contenttransition 0.8s;
+}
+#textcenter p{
+    opacity:0.6;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: contenttransition 0.8s;
+}
+#textcenter a{
+    text-decoration: none;
+    color:black;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.6;
+    animation: contenttransition 0.8s;
+}
+#left #textcenter{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#right{
+    width:60%;
+    height:100%;
+    background-color: white;
+}
+#rtop{
+    display:flex;
+    width:100%;
+    height:50%;
+    background-color: royalblue;
+}
+#rbottom{
+    width:100%;
+    height:50%;
+    background-image: url(https://jottful.com/wp-content/uploads/2019/06/simple-768x520.jpg);
+    background-size: cover;
+    background-position:center;
+    animation:slidefromtop 0.8s ;
+    transition: 0.3s ease;
+}
+#rtopleft{
+    width:55%;
+    height:100%;
+    background-image: url(https://www.essential-grid.com/wp-content/uploads/2020/08/Uwe-Krupp-3.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: slidefromtop 0.8s;
+}
+#rtopright{
+    width:45%;
+    height:100%;
+    background-image:url(https://static.natureheals.co.uk/wp-content/uploads/2020/06/Orange-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: slidefromtop 0.8s;
+}
+
+@keyframes transitionIn {
+    from{
+        opacity:0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+@keyframes contenttransition{
+    from{
+        opacity: 0;
+        transform: translateX(-150px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+@keyframes slidefromtop{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);  
+    }
+}
